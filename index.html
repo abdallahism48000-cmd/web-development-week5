@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise | Smart Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SpendWise home">
+        <span class="brand-mark">S</span>
+        <span>SpendWise</span>
+      </a>
+      <button class="icon-button" type="button" id="resetBudget" aria-label="Enter budget again" title="Enter budget again">
+        <span aria-hidden="true">↻</span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">MONTHLY OVERVIEW</p>
+      <h1>Welcome back</h1>
+      <p class="subtitle">Here is how your spending is looking.</p>
+    </section>
+
+    <section class="summary-grid" aria-label="Budget summary">
+      <article class="summary-card balance-card">
+        <p>Remaining Balance</p>
+        <h2 id="remainingBalance">$0.00</h2>
+        <span id="budgetStatus" class="status-badge">Waiting for budget</span>
+      </article>
+
+      <article class="summary-card">
+        <p>Monthly Budget</p>
+        <h2 id="monthlyBudget">$0.00</h2>
+        <span class="card-caption">Income planned</span>
+      </article>
+
+      <article class="summary-card">
+        <p>Total Spent</p>
+        <h2 id="totalExpenses">$0.00</h2>
+        <span class="card-caption" id="expenseCount">0 expenses</span>
+      </article>
+    </section>
+
+    <section class="progress-section">
+      <div class="section-heading">
+        <h2>Budget Progress</h2>
+        <span id="progressPercent">0% used</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Budget used" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </section>
+
+    <section class="expenses-section">
+      <div class="section-heading">
+        <h2>Recent Expenses</h2>
+        <button type="button" class="add-button" id="addExpense">+ Add expense</button>
+      </div>
+      <div class="expense-list" id="expenseList">
+        <p class="empty-state">No expenses added yet.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
